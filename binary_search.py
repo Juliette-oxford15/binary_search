@@ -13,7 +13,7 @@ def binary_search(l,v):
             end=mid
     return False
 
-def simple_tests():
+def run_simple_tests():
     print binary_search([1,3,5,6,9,18,34,56,135],2)
 
 def test_search(lst,notlst):
