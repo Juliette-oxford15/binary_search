@@ -3,18 +3,29 @@
 def binary_search(l,v):
     start=0
     end=len(l)-1
-    while start+1 < end :
+    while start <= end :
         mid=(start+end)/2
         if l[mid]==v:
             return True
         elif l[mid]<v:
-            start=mid
+            start=mid+1
         elif l[mid]>v:
-            end=mid
+            end=mid-1
     return False
 
 def run_simple_tests():
     print binary_search([1,3,5,6,9,18,34,56,135],2)
+    print binary_search([1,3,5,7,12,12,15,16,100,132,223],1)
+    print binary_search([1,3,5,7,12,12,15,16,100,132,223],3)
+    print binary_search([1,3,5,7,12,12,15,16,100,132,223],5)
+    print binary_search([1,3,5,7,12,12,15,16,100,132,223],7)
+    print binary_search([1,3,5,7,12,12,15,16,100,132,223],12)
+    print binary_search([1,3,5,7,12,12,15,16,100,132,223],15)
+    print binary_search([1,3,5,7,12,12,15,16,100,132,223],16)
+    print binary_search([1,3,5,7,12,12,15,16,100,132,223],100)
+    print binary_search([1,3,5,7,12,12,15,16,100,132,223],132)
+    print binary_search([1,3,5,7,12,12,15,16,100,132,223],223)
+
 
 def test_search(lst,notlst):
     for item in lst:
